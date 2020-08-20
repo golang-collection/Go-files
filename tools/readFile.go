@@ -25,6 +25,7 @@ func ReadFile(path string) ([]string, error){
 
 	result := make([]string, 0)
 
+	//默认缓冲区大小4096
 	inputReader := bufio.NewReader(inputFile)
 	for {
 		inputString, readerError := inputReader.ReadString('\n')
